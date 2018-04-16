@@ -32,9 +32,9 @@ COMMIT_SUBJECT="$(git log -1 "$TRAVIS_COMMIT" --pretty="%s")"
 COMMIT_MESSAGE="$(git log -1 "$TRAVIS_COMMIT" --pretty="%b")"
 
 if [ "$AUTHOR_NAME" == "$COMMITTER_NAME" ]; then
-  CREDITS="$AUTHOR_NAME authored & committed"
+  CREDITS="$AUTHOR_NAME authored & committed. View the builded app at https://expo.io/@tripaloski/ApprTest"
 else
-  CREDITS="$AUTHOR_NAME authored & $COMMITTER_NAME committed"
+  CREDITS="$AUTHOR_NAME authored & $COMMITTER_NAME committed. View the builded app at https://expo.io/@tripaloski/ApprTest"
 fi
 
 if [[ $TRAVIS_PULL_REQUEST != false ]]; then
